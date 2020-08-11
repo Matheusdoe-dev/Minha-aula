@@ -32,7 +32,7 @@ const Index = () => {
                 <Button
                   background="var(--secondary-2)"
                   color="var(--support-4)"
-                  to="/professor/login"
+                  to="/professor/cadastro"
                 >
                   Dê aulas
                 </Button>
