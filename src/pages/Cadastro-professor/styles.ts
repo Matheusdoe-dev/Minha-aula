@@ -18,8 +18,6 @@ export const CadastroProfessorContainer = styled.main`
     }
 
     h4 {
-      margin-bottom: var(--gap-md);
-
       &::after {
         content: "";
         display: block;
@@ -27,6 +25,31 @@ export const CadastroProfessorContainer = styled.main`
         border: 1px solid var(--support-1);
         opacity: 20%;
         margin: calc(var(--gap) / 2) 0 var(--gap-md) 0;
+      }
+    }
+  }
+`;
+
+export const HorariosDisponiveis = styled.div`
+  & {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    h4 {
+      display: inline-block;
+    }
+
+    button {
+      font-size: 1rem;
+      text-transform: none !important;
+      color: var(--secondary-1);
+      padding: 0 var(--gap) var(--gap) var(--gap);
+      background: none;
+      border: none;
+      margin: 0;
+      &:hover {
+        filter: brightness(85%);
       }
     }
   }
