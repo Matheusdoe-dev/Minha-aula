@@ -6,15 +6,16 @@ interface Props {
   title: string;
   subtitle?: string;
   children: any;
+  onSubmit?: any;
 }
 
-const Form = (props: Props) => {
+const Form: React.FC<Props> = ({ title, subtitle, children, onSubmit }) => {
   return (
-    <FormContainer>
-      <h3>{props.title}</h3>
-      <p>{props.subtitle}</p>
+    <FormContainer onSubmit={onSubmit}>
+      <h3>{title}</h3>
+      <p>{subtitle}</p>
 
-      {props.children}
+      {children}
     </FormContainer>
   );
 };

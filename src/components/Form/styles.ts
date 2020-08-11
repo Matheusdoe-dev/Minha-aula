@@ -34,7 +34,9 @@ export const FormContainer = styled.form`
       }
     }
 
-    input {
+    input,
+    select,
+    textarea {
       margin-bottom: var(--gap-md);
     }
   }
