@@ -4,6 +4,7 @@ interface Props {
   width?: string;
   color?: string;
   background?: string;
+  maxLength?: any;
 }
 
 export const Input = styled.input`

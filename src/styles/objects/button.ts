@@ -23,7 +23,6 @@ export const Button = styled(Link)`
     text-align: center;
     border: none;
     transition: 0.2s;
-    cursor: pointer;
     box-sizing: border-box;
 
     &:hover {

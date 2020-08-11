@@ -4,6 +4,7 @@ const Elements = createGlobalStyle`
     body {
         font-family: Lato, Roboto, Helvetica, Arial, sans-serif !important;
         color: var(--support-4);
+        background: var(--support-3);
     }
     
     h1 {
@@ -58,6 +59,7 @@ const Elements = createGlobalStyle`
         font-size: 1.375;
         letter-spacing: .3px;
         text-transform: uppercase;
+        cursor: pointer;
     }
 
     img {
