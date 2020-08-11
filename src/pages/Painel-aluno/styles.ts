@@ -14,7 +14,8 @@ export const PainelHeader = styled.div`
   & {
     background: var(--base-2);
 
-    input {
+    input,
+    select {
       background: var(--support-1);
       border-radius: 5px;
       border: none;
@@ -31,11 +32,5 @@ export const PainelHeader = styled.div`
 export const PainelFeed = styled.section`
   & {
     padding: var(--gap-xl) 0;
-  }
-`;
-
-export const Professor = styled.div`
-  & {
-    padding: var(--gap);
   }
 `;
