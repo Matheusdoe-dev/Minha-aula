@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TeacherContainer = styled.div`
   & {
+    width: 100%;
     padding: var(--gap);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12),
       0px 1px 10px rgba(0, 0, 0, 0.2);
@@ -20,6 +21,10 @@ export const TeacherInfo = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: var(--gap-sm);
+
+    h4 {
+      margin-bottom: calc(var(--gap) / 2);
+    }
 
     img {
       display: inline-block;
@@ -47,6 +52,20 @@ export const TeacherFooter = styled.div`
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--base);
+    }
+
+    @media (max-width: 600px) {
+      a {
+        font-size: 0.75rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+      }
+
+      span {
+        font-size: 1.125rem;
+      }
     }
   }
 `;

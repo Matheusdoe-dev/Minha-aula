@@ -10,6 +10,7 @@ export const SelectContainer = styled.div`
   & {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     label {
       margin-bottom: var(--gap);
@@ -32,6 +33,11 @@ export const SelectContainer = styled.div`
         outline: none;
         filter: brightness(75%);
         transition: 0.2s;
+      }
+
+      @media (max-width: 960px) {
+        display: block;
+        width: 100%;
       }
     }
   }

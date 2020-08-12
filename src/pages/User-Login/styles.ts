@@ -13,5 +13,9 @@ export const LoginAlunoContainer = styled.main`
       text-align: center;
       margin: var(--gap-sm) auto;
     }
+
+    @media (max-width: 960px) {
+      background: var(--base);
+    }
   }
 `;

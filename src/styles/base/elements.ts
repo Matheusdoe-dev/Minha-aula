@@ -25,7 +25,7 @@ const Elements = createGlobalStyle`
         font-size: 3rem;
         font-weight: 900;
         
-        @media (max-witdh: 600px) {
+        @media (max-width: 600px) {
             & {
                 font-size: 2.25rem;
             }

@@ -20,7 +20,7 @@ const SelectInput: React.FC<SelectProps> = ({
   return (
     <SelectContainer>
       <label htmlFor={name}>{label}</label>
-      <select name={name} id={name} {...rest}>
+      <select value="" name={name} id={name} {...rest}>
         <option value="" disabled hidden>
           Selecione uma opção
         </option>

@@ -3,7 +3,7 @@ import React from "react";
 import { Grid, Container } from "@material-ui/core";
 import Header from "../../components/Header/index";
 // styled-components
-import { IntroContainer } from "./styles";
+import { IntroContainer, Buttons } from "./styles";
 import { Button } from "../../styles/objects/button";
 // imgs
 import introImg from "../../assets/intro-img.jpg";
@@ -21,13 +21,13 @@ const Index = () => {
             alignItems="center"
             style={{ marginTop: "var(--gap-lg)" }}
           >
-            <Grid item container xs={12} sm={7}>
+            <Grid item container xs={12} md={7}>
               <h1>SUA PLATAFORMA DE AGENDAMENTO DE AULAS</h1>
               <p>
                 Marque com um professor, ou aluno, e assista ou lecione aulas de
                 onde estiver
               </p>
-              <div>
+              <Buttons>
                 <Button to="/aluno/login">Assista aulas</Button>
                 <Button
                   background="var(--secondary-2)"
@@ -36,10 +36,10 @@ const Index = () => {
                 >
                   Dê aulas
                 </Button>
-              </div>
+              </Buttons>
             </Grid>
-            <Grid item container xs={12} sm={5}>
-              <img src={introImg} alt="Imagen da introdução" />
+            <Grid item container xs={12} md={5}>
+              <img src={introImg} alt="Imagem da introdução" />
             </Grid>
           </Grid>
         </Container>

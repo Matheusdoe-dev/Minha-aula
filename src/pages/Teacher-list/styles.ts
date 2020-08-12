@@ -26,6 +26,14 @@ export const PainelHeader = styled.div`
       color: var(--support-1);
       margin-bottom: var(--gap);
     }
+
+    @media (max-width: 960px) {
+      select,
+      input {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 `;
 

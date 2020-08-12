@@ -29,5 +29,9 @@ export const CadastroAlunoContainer = styled.main`
         margin: calc(var(--gap) / 2) 0 var(--gap-md) 0;
       }
     }
+
+    @media (max-width: 960px) {
+      background: var(--base);
+    }
   }
 `;

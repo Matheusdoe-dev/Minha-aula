@@ -8,7 +8,7 @@ import { LoginAlunoContainer } from "./styles";
 import { Input } from "../../styles/objects/input";
 import { Button } from "../../styles/objects/button";
 // imgs
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logo-2.svg";
 
 const LoginAluno = () => {
   return (
@@ -16,8 +16,8 @@ const LoginAluno = () => {
       <Header logo={logoImg} />
       <Container>
         <Grid container spacing={2}>
-          <Grid item container sm={4}></Grid>
-          <Grid item container xs={12} sm={4}>
+          <Grid item container md={4}></Grid>
+          <Grid item container xs={12} md={4}>
             <Form title="SEJA BEM VINDO ALUNO" subtitle="JÁ TEM UMA CONTA ?">
               <label htmlFor="email">E-mail</label>
               <Input
