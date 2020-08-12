@@ -1,12 +1,15 @@
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 
 const ScheduleItems = () => {
   const [scheduleItems, setScheduleItems] = useState([
-    { week_day: 0, from: "", to: "" },
+    {
+      week_day: 0,
+      from: "",
+      to: "",
+    },
   ]);
 
-  const addScheduleItem = (event: ChangeEvent<EventTarget>) => {
-    event.preventDefault();
+  const addNewScheduleItem = () => {
     setScheduleItems([...scheduleItems, { week_day: 0, from: "", to: "" }]);
   };
 
@@ -15,7 +18,7 @@ const ScheduleItems = () => {
     field: string,
     value: string
   ) => {
-    const newArray = scheduleItems.map((scheduleItem, index) => {
+    const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
       if (index === position) {
         return { ...scheduleItem, [field]: value };
       }
@@ -23,14 +26,15 @@ const ScheduleItems = () => {
       return scheduleItem;
     });
 
-    setScheduleItems(newArray);
+    console.log(updatedScheduleItems);
+    setScheduleItems(updatedScheduleItems);
     console.log(scheduleItems);
   };
 
   return {
     scheduleItems,
     setScheduleItemValue,
-    addScheduleItem,
+    addNewScheduleItem,
   };
 };
 

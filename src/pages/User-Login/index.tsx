@@ -4,15 +4,15 @@ import Header from "../../components/Header/index";
 import { Container, Grid } from "@material-ui/core";
 import Form from "../../components/Form/index";
 // styled-components
-import { LoginAlunoContainer } from "./styles";
+import { UserLoginContainer } from "./styles";
 import { Input } from "../../styles/objects/input";
 import { Button } from "../../styles/objects/button";
 // imgs
 import logoImg from "../../assets/logo-2.svg";
 
-const LoginAluno = () => {
+const UserLogin = () => {
   return (
-    <LoginAlunoContainer>
+    <UserLoginContainer>
       <Header logo={logoImg} />
       <Container>
         <Grid container spacing={2}>
@@ -41,7 +41,7 @@ const LoginAluno = () => {
                 background="var(--secondary-1)"
                 color="var(--support-4)"
                 width="100%"
-                to="/aluno/painel"
+                to="/teacher-list"
               >
                 Entrar
               </Button>
@@ -50,7 +50,7 @@ const LoginAluno = () => {
                 background="var(--support-1)"
                 color="var(--support-4)"
                 width="100%"
-                to="/aluno/cadastro"
+                to="/user/register"
               >
                 Cadastrar
               </Button>
@@ -58,8 +58,8 @@ const LoginAluno = () => {
           </Grid>
         </Grid>
       </Container>
-    </LoginAlunoContainer>
+    </UserLoginContainer>
   );
 };
 
-export default LoginAluno;
+export default UserLogin;

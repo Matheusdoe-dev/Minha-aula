@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PainelAlunoContainer = styled.main`
+export const TeacherListContainer = styled.main`
   & {
     max-width: 100vw;
     height: auto;
@@ -10,7 +10,7 @@ export const PainelAlunoContainer = styled.main`
   }
 `;
 
-export const PainelHeader = styled.div`
+export const TeacherListHeader = styled.div`
   & {
     background: var(--base-2);
 
@@ -37,7 +37,7 @@ export const PainelHeader = styled.div`
   }
 `;
 
-export const PainelFeed = styled.section`
+export const TeacherListFeed = styled.section`
   & {
     padding: var(--gap-xl) 0;
   }

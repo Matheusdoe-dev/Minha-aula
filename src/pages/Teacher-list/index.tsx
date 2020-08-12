@@ -5,15 +5,19 @@ import { Container, Grid } from "@material-ui/core";
 import SelectInput from "../../components/Select";
 import Teacher from "../../components/Teacher/index";
 // styles
-import { PainelAlunoContainer, PainelHeader, PainelFeed } from "./styles";
+import {
+  TeacherListContainer,
+  TeacherListHeader,
+  TeacherListFeed,
+} from "./styles";
 import { Input } from "../../styles/objects/input";
 // imgs
 import logoImg from "../../assets/logo-2.svg";
 // hooks
-import TeacherList from "../../hooks/teachers-list";
+import TeacherListHook from "../../hooks/teachers-list";
 import { Button } from "../../styles/objects/button";
 
-const PainelAluno = () => {
+const TeacherList = () => {
   const {
     materia,
     week_day,
@@ -23,11 +27,11 @@ const PainelAluno = () => {
     setTime,
     searchTeachers,
     teachers,
-  } = TeacherList();
+  } = TeacherListHook();
 
   return (
-    <PainelAlunoContainer>
-      <PainelHeader>
+    <TeacherListContainer>
+      <TeacherListHeader>
         <Header background="var(--base)" logo={logoImg} />
 
         <Container>
@@ -100,9 +104,9 @@ const PainelAluno = () => {
             </Grid>
           </form>
         </Container>
-      </PainelHeader>
+      </TeacherListHeader>
 
-      <PainelFeed>
+      <TeacherListFeed>
         <Container>
           <Grid container spacing={2}>
             <Grid item container xs={12}>
@@ -130,9 +134,9 @@ const PainelAluno = () => {
             </Grid>
           </Grid>
         </Container>
-      </PainelFeed>
-    </PainelAlunoContainer>
+      </TeacherListFeed>
+    </TeacherListContainer>
   );
 };
 
-export default PainelAluno;
+export default TeacherList;

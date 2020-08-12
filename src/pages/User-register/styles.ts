@@ -2,7 +2,7 @@ import styled from "styled-components";
 // bg
 import loginBg from "../../assets/login-bg.jpg";
 
-export const CadastroAlunoContainer = styled.main`
+export const UserRegisterContainer = styled.main`
   & {
     max-width: 100vw;
     height: auto;

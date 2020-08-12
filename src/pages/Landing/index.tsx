@@ -9,7 +9,7 @@ import { Button } from "../../styles/objects/button";
 import introImg from "../../assets/intro-img.jpg";
 import logoImg from "../../assets/logo.svg";
 
-const Index = () => {
+const Landing = () => {
   return (
     <>
       <IntroContainer>
@@ -28,11 +28,11 @@ const Index = () => {
                 onde estiver
               </p>
               <Buttons>
-                <Button to="/aluno/login">Assista aulas</Button>
+                <Button to="/teacher-list">Assista aulas</Button>
                 <Button
                   background="var(--secondary-2)"
                   color="var(--support-4)"
-                  to="/professor/cadastro"
+                  to="/class-register"
                 >
                   Dê aulas
                 </Button>
@@ -48,4 +48,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Landing;

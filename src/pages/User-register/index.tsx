@@ -4,15 +4,15 @@ import Header from "../../components/Header/index";
 import { Container, Grid } from "@material-ui/core";
 import Form from "../../components/Form/index";
 // styled-components
-import { CadastroAlunoContainer } from "./styles";
+import { UserRegisterContainer } from "./styles";
 import { Input } from "../../styles/objects/input";
 import { Button } from "../../styles/objects/button";
 // imgs
 import logoImg from "../../assets/logo-2.svg";
 
-const CadastroAluno = () => {
+const UserRegister = () => {
   return (
-    <CadastroAlunoContainer>
+    <UserRegisterContainer>
       <Header logo={logoImg} />
       <Container>
         <Grid container spacing={2}>
@@ -76,8 +76,8 @@ const CadastroAluno = () => {
           </Grid>
         </Grid>
       </Container>
-    </CadastroAlunoContainer>
+    </UserRegisterContainer>
   );
 };
 
-export default CadastroAluno;
+export default UserRegister;

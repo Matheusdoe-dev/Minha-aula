@@ -4,9 +4,9 @@ import api from "../services/api";
 const TeacherList = () => {
   const [teachers, setTeachers] = useState([]);
 
-  const [materia, setMateria] = useState("Matemática");
-  const [week_day, setWeekDay] = useState("1");
-  const [time, setTime] = useState("19:00");
+  const [materia, setMateria] = useState("");
+  const [week_day, setWeekDay] = useState("");
+  const [time, setTime] = useState("");
 
   const searchTeachers = async (e: FormEvent) => {
     e.preventDefault();
@@ -18,7 +18,6 @@ const TeacherList = () => {
         time,
       },
     });
-
     setTeachers(response.data);
   };
 

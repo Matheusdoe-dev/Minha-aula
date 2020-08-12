@@ -9,18 +9,28 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
     value: string;
     label: string;
   }>;
+  setValue?: any;
+  value?: any;
 }
 
 const SelectInput: React.FC<SelectProps> = ({
   label,
   name,
   options,
+  value,
+  setValue,
   ...rest
 }) => {
   return (
     <SelectContainer>
       <label htmlFor={name}>{label}</label>
-      <select value="" name={name} id={name} {...rest}>
+      <select
+        name={name}
+        id={name}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        {...rest}
+      >
         <option value="" disabled hidden>
           Selecione uma opção
         </option>
