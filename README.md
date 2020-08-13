@@ -1,44 +1,86 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Minha Aula
 
-## Available Scripts
+> Uma aplicação que liga alunos e professores.
 
-In the project directory, you can run:
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-### `yarn start`
+This is a web application that connect students and teachers
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<a href="https://minha-aula.netlify.app"><img src="./github/thumb.jpg"></a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Get Started
 
-### `yarn test`
+Start:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm install
 
-### `yarn build`
+npm start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+yarn
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build:
 
-### `yarn eject`
+```sh
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+yarn build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## About
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### What is that?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p> This is an web application made with ReactJS, Material UI and Styled-Components.</p>
 
-## Learn More
+### Why ?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<ul>
+<li> This was a project that I did on the Rockeseat Next Level Week 2.0</li>
+<li> Practice and gain more experience </li>
+</ul>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Technologies
+
+<ul>
+<li><a href="https://pt-br.reactjs.org/">ReactJS</a></li>
+<li><a href="https://material-ui.com/">Material UI</a></li>
+<li><a href="https://styled-components.com/">Styled-Components</a></li>
+</ul>
+
+## Links
+
+<ul>
+<li><a href="https://minha-aula.netlify.app/">Live</a></li>
+</ul>
+
+## Meta
+
+Author: Matheus do É Santos – [Linkedin](https://www.linkedin.com/in/matheusdoe-dev/)
+
+Distributed under the MIT license. See `LICENSE` for more information.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
