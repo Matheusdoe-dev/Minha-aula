@@ -3,14 +3,14 @@ import { useState } from "react";
 const ScheduleItems = () => {
   const [scheduleItems, setScheduleItems] = useState([
     {
-      week_day: 0,
+      week_day: "",
       from: "",
       to: "",
     },
   ]);
 
   const addNewScheduleItem = () => {
-    setScheduleItems([...scheduleItems, { week_day: 0, from: "", to: "" }]);
+    setScheduleItems([...scheduleItems, { week_day: "", from: "", to: "" }]);
   };
 
   const setScheduleItemValue = (

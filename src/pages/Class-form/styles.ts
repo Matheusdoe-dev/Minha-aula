@@ -1,23 +1,21 @@
 import styled from "styled-components";
-// bg
-import loginBg from "../../assets/login-bg.jpg";
 
-export const CadastroProfessorContainer = styled.main`
+export const ClassFormContainer = styled.main`
   & {
-    max-width: 100vw;
+    min-height: 100vh;
     height: auto;
-    background: url(${loginBg});
-    background-size: contain;
-    background-repeat: repeat;
-    padding: var(--gap-xl) 0;
+    padding-bottom: var(--gap-xl);
+    background: var(--base);
+    color: var(--support-1);
 
-    span {
-      display: block;
-      text-align: center;
-      margin: var(--gap-sm) auto;
+    h3 {
+      margin: 0 auto var(--gap-lg) auto;
+      color: var(--support-1);
     }
 
     h4 {
+      margin-bottom: var(--gap-sm);
+
       &::after {
         content: "";
         display: block;
@@ -31,10 +29,16 @@ export const CadastroProfessorContainer = styled.main`
     @media (max-width: 960px) {
       background: var(--base);
     }
+
+    input,
+    select,
+    textarea {
+      margin-bottom: var(--gap-sm);
+    }
   }
 `;
 
-export const HorariosDisponiveis = styled.div`
+export const ScheduleItemsContainer = styled.div`
   & {
     display: flex;
     justify-content: space-between;
@@ -42,6 +46,7 @@ export const HorariosDisponiveis = styled.div`
 
     h4 {
       display: inline-block;
+      margin-bottom: 0;
     }
 
     button {

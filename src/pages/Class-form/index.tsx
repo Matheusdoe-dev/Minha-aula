@@ -1,20 +1,20 @@
 import React from "react";
-// components
-import Header from "../../components/Header/index";
 import { Container, Grid } from "@material-ui/core";
-import Form from "../../components/Form/index";
-import SelectInput from "../../components/Select/index";
-// styled-components
-import { CadastroProfessorContainer, HorariosDisponiveis } from "./styles";
-import { Button } from "../../styles/objects/button";
-import { Input } from "../../styles/objects/input";
+// components
+import Input from "../../components/Input";
+import Textarea from "../../components/Textarea";
+import Select from "../../components/Select";
+// styles
+import { ClassFormContainer, ScheduleItemsContainer } from "./styles";
 // imgs
 import logoImg from "../../assets/logo-2.svg";
 // hooks
-import CadastroProfessorHooks from "../../hooks/cadastro-professor";
+import ClassFormHooks from "../../hooks/teacher-register";
 import ScheduleItems from "../../hooks/schedule-items";
+import Header from "../../components/Header";
+import { Button } from "../../styles/objects/button";
 
-const CadastroProfessor = () => {
+const ClassForm = () => {
   const {
     addNewScheduleItem,
     scheduleItems,
@@ -34,86 +34,56 @@ const CadastroProfessor = () => {
     custo,
     setCusto,
     handleCreateClass,
-  } = CadastroProfessorHooks();
+  } = ClassFormHooks();
 
   return (
-    <CadastroProfessorContainer>
-      <Header logo={logoImg} />
+    <ClassFormContainer>
       <Container>
+        <Header logo={logoImg} />
         <Grid container spacing={2}>
-          <Grid item container md={4}></Grid>
-          <Grid item container xs={12} md={4}>
-            <Form
-              title="CADASTRE-SE"
-              subtitle="E APROVEITE!"
-              onSubmit={handleCreateClass}
-            >
+          <Grid item container md={4} />
+          <Grid item container xs={12} md={4} direction="column">
+            <h3>Cadastre sua aula</h3>
+            <form onSubmit={handleCreateClass}>
               <fieldset>
                 <h4>Seus dados</h4>
-                <label htmlFor="email">Nome completo</label>
                 <Input
-                  type="text"
+                  label="Nome Completo"
                   name="name"
-                  id="name"
-                  value={name}
                   placeholder="Digite seu nome completo"
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
+                  value={name}
+                  setValue={setName}
                 />
-
-                <label htmlFor="avatar">
-                  Link da sua foto <sub>(comece com //http)</sub>
-                </label>
                 <Input
-                  type="text"
+                  label="Link da sua foto"
                   name="avatar"
-                  id="avatar"
                   placeholder="Digite o link da sua foto"
                   value={avatar}
-                  onChange={(e) => {
-                    setAvatar(e.target.value);
-                  }}
+                  setValue={setAvatar}
                 />
-
-                <label htmlFor="whatsapp">
-                  Whatsapp <sub>(somente numeros)</sub>
-                </label>
                 <Input
-                  type="text"
+                  label="Whatsapp"
                   name="whatsapp"
-                  id="whatsapp"
-                  placeholder="Digite o seu whatsapp"
+                  placeholder="Digite o número do seu whatsapp"
                   value={whatsapp}
-                  onChange={(e) => {
-                    setWhatsapp(e.target.value);
-                  }}
+                  setValue={setWhatsapp}
                 />
-
-                <label htmlFor="bio">Biografia</label>
-                <Input
-                  as="textarea"
+                <Textarea
+                  label="Biografia"
                   name="bio"
-                  id="bio"
-                  placeholder="Digite um pouco da sua biografia"
-                  style={{ height: "120px", marginBottom: "var(--gap-md)" }}
+                  placeholder="Digite o número do seu whatsapp"
                   value={bio}
-                  onChange={(e: any) => {
-                    setBio(e.target.value);
-                  }}
+                  setValue={setBio}
                 />
               </fieldset>
-
               <fieldset>
-                <h4>Sobre aula</h4>
+                <h4>Sobre a aula</h4>
 
-                <SelectInput
+                <Select
                   name="materia"
                   label="Materia"
                   value={materia}
-                  onChange={(e: any) => {
-                    setMateria(e.target.value);
-                  }}
+                  setValue={setMateria}
                   options={[
                     { value: "Matemática", label: "Matemática" },
                     { value: "Biologia", label: "Biologia" },
@@ -128,31 +98,26 @@ const CadastroProfessor = () => {
                   ]}
                 />
 
-                <label htmlFor="custo">
-                  Custo da sua hora por aula <sub>(em R$)</sub>
-                </label>
                 <Input
-                  type="text"
+                  label="Custo da sua hora por aula"
                   name="custo"
-                  id="custo"
-                  placeholder="Digite aqui sua hora por aula"
+                  placeholder="Digite aqui o preço da sua hora aula"
                   value={custo}
-                  onChange={(e: any) => {
-                    setCusto(e.target.value);
-                  }}
+                  setValue={setCusto}
                 />
               </fieldset>
 
               <fieldset>
-                <HorariosDisponiveis>
+                <ScheduleItemsContainer>
                   <h4>Horários disponíveis</h4>
                   <button onClick={addNewScheduleItem}>+ Novo horário</button>
-                </HorariosDisponiveis>
+                </ScheduleItemsContainer>
+
                 {scheduleItems.map((schedule, index) => (
                   <div key={schedule.week_day}>
                     <Grid item container spacing={2}>
                       <Grid item xs={6}>
-                        <SelectInput
+                        <Select
                           name="week_day"
                           label="Dia"
                           value={schedule.week_day}
@@ -175,11 +140,10 @@ const CadastroProfessor = () => {
                         />
                       </Grid>
                       <Grid item xs={3}>
-                        <label htmlFor="from">Das</label>
                         <Input
                           type="time"
+                          label="Das"
                           name="from"
-                          id="from"
                           value={schedule.from}
                           onChange={(e) =>
                             setScheduleItemValue(index, "from", e.target.value)
@@ -187,11 +151,10 @@ const CadastroProfessor = () => {
                         />
                       </Grid>
                       <Grid item xs={3}>
-                        <label htmlFor="to">Até</label>
                         <Input
                           type="time"
+                          label="Até"
                           name="to"
-                          id="to"
                           value={schedule.to}
                           onChange={(e) =>
                             setScheduleItemValue(index, "to", e.target.value)
@@ -202,7 +165,6 @@ const CadastroProfessor = () => {
                   </div>
                 ))}
               </fieldset>
-
               <Button
                 as="button"
                 type="submit"
@@ -212,12 +174,12 @@ const CadastroProfessor = () => {
               >
                 Salvar Cadastro
               </Button>
-            </Form>
+            </form>
           </Grid>
         </Grid>
       </Container>
-    </CadastroProfessorContainer>
+    </ClassFormContainer>
   );
 };
 
-export default CadastroProfessor;
+export default ClassForm;

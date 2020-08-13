@@ -2,10 +2,9 @@ import React from "react";
 // components
 import Header from "../../components/Header/index";
 import { Container, Grid } from "@material-ui/core";
-import Form from "../../components/Form/index";
+import Input from "../../components/Input/index";
 // styled-components
 import { UserLoginContainer } from "./styles";
-import { Input } from "../../styles/objects/input";
 import { Button } from "../../styles/objects/button";
 // imgs
 import logoImg from "../../assets/logo-2.svg";
@@ -18,23 +17,19 @@ const UserLogin = () => {
         <Grid container spacing={2}>
           <Grid item container md={4}></Grid>
           <Grid item container xs={12} md={4}>
-            <Form title="SEJA BEM VINDO ALUNO" subtitle="JÁ TEM UMA CONTA ?">
-              <label htmlFor="email">E-mail</label>
+            <h3>Já tem uma conta?</h3>
+            <form>
               <Input
-                type="email"
+                label="E-mail"
                 name="email"
-                id="email"
                 placeholder="Digite seu e-mail"
-                required
               />
 
-              <label htmlFor="senha">Senha</label>
               <Input
                 type="password"
+                label="Senha"
                 name="senha"
-                id="senha"
-                placeholder="Digite seu senha"
-                required
+                placeholder="Digite sua senha"
               />
 
               <Button
@@ -54,7 +49,7 @@ const UserLogin = () => {
               >
                 Cadastrar
               </Button>
-            </Form>
+            </form>
           </Grid>
         </Grid>
       </Container>

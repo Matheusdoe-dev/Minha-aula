@@ -1,26 +1,22 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 // components
-import Index from "./pages/Index/index";
-import LoginAluno from "./pages/Login-aluno/index";
-import LoginProfessor from "./pages/Login-professor/index";
-import CadastroProfessor from "./pages/Cadastro-professor/index";
-import CadastroAluno from "./pages/Cadastro-aluno/index";
-import PainelAluno from "./pages/Painel-aluno/index";
+import Landing from "./pages/Landing/index";
+import LoginAluno from "./pages/User-Login/index";
+import ClassForm from "./pages/Class-form/index";
+import UserRegister from "./pages/User-register/index";
+import TeacherList from "./pages/Teacher-list/index";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Index} />
-        {/* aluno */}
-        <Route path="/aluno/login" component={LoginAluno} />
-        <Route path="/aluno/cadastro" component={CadastroAluno} />
-        <Route path="/aluno/painel" component={PainelAluno} />
-        {/* professor */}
-        <Route path="/professor/login" component={LoginProfessor} />
-        <Route path="/professor/cadastro" component={CadastroProfessor} />
-        {/* <Route path="/professor/painel" component={PainelProfessor} /> */}
+        <Route path="/" exact component={Landing} />
+        <Route path="/user/login" component={LoginAluno} />
+        <Route path="/user/register" component={UserRegister} />
+        <Route path="/teacher-list" component={TeacherList} />
+
+        <Route path="/class-register" component={ClassForm} />
       </Switch>
     </BrowserRouter>
   );

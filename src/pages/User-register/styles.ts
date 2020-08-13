@@ -1,15 +1,21 @@
 import styled from "styled-components";
-// bg
-import loginBg from "../../assets/login-bg.jpg";
 
 export const UserRegisterContainer = styled.main`
   & {
     max-width: 100vw;
     height: auto;
-    background: url(${loginBg});
-    background-size: contain;
-    background-repeat: repeat;
+    background: var(--base);
     padding-bottom: var(--gap-xl);
+    color: var(--support-1);
+
+    form {
+      width: 100%;
+    }
+
+    h3 {
+      margin: 0 auto var(--gap-lg) auto;
+      color: var(--support-1);
+    }
 
     span {
       display: block;
@@ -32,6 +38,12 @@ export const UserRegisterContainer = styled.main`
 
     @media (max-width: 960px) {
       background: var(--base);
+    }
+
+    input,
+    select,
+    textarea {
+      margin-bottom: var(--gap-sm);
     }
   }
 `;

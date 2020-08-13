@@ -4,13 +4,13 @@ import Header from "../../components/Header/index";
 import { Container, Grid } from "@material-ui/core";
 import SelectInput from "../../components/Select";
 import Teacher from "../../components/Teacher/index";
+import Input from "../../components/Input/index";
 // styles
 import {
   TeacherListContainer,
   TeacherListHeader,
   TeacherListFeed,
 } from "./styles";
-import { Input } from "../../styles/objects/input";
 // imgs
 import logoImg from "../../assets/logo-2.svg";
 // hooks
@@ -79,15 +79,12 @@ const TeacherList = () => {
                 />
               </Grid>
               <Grid item container xs={12} md={3}>
-                <label htmlFor="time">Horário</label>
                 <Input
                   type="time"
+                  label="Horário"
                   name="time"
-                  id="time"
                   value={time}
-                  onChange={(e) => {
-                    setTime(e.target.value);
-                  }}
+                  setValue={setTime}
                 />
               </Grid>
               <Grid item container xs={12} md={3} alignContent="flex-end">
