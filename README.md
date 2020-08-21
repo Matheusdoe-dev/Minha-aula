@@ -8,7 +8,7 @@
 
 This is a web application that connect students and teachers
 
-<a href="https://minha-aula.netlify.app"><img src="./github/thumb.jpg"></a>
+<a href="https://minha-aula.netlify.app"><img src="./github/thumbs/thumb.jpg"></a>
 
 ## Get Started
 
