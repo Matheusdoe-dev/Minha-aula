@@ -1,0 +1,12 @@
+@import "../tools/breakpoints";
+
+.button-group {
+  display: flex;
+  column-gap: var(--gap-xs);
+
+  @media (max-width: $small) {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: var(--gap-sm);
+  }
+}
