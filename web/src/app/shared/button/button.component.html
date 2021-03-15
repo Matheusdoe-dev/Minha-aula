@@ -1,0 +1,7 @@
+<a
+  [class]="secondary ? 'button button--secondary' : 'button'"
+  *ngIf="type === 'link'"
+  [routerLink]="[path]"
+  routerLinkActive="router-link-active"
+  >{{ content }}</a
+>

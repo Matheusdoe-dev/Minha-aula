@@ -1,0 +1,10 @@
+.header {
+  padding: var(--gap-xs) 0;
+
+  &__brand {
+    &__img {
+      width: 174px;
+      height: 26px;
+    }
+  }
+}
