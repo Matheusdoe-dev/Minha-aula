@@ -1,0 +1,12 @@
+<div class="input-block">
+  <label [for]="name" class="input-block__label">{{ label }}</label>
+  <input
+    [type]="type ? type : 'text'"
+    [id]="name"
+    [name]="name"
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    (keydown)="onChange()"
+    class="input-block__input"
+  />
+</div>
