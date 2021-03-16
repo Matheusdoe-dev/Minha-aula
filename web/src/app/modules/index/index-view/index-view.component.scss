@@ -1,9 +1,9 @@
-@import "../../../assets/styles/settings/colors";
-@import "../../../assets/styles/objects/button-group";
+@import "../../../../assets/styles/settings/colors";
+@import "../../../../assets/styles/objects/button-group";
 
 .intro {
   min-height: 100vh;
-  background: url("../../../assets/images/intro-bg.jpg") repeat-y;
+  background: url("../../../../assets/images/intro-bg.jpg") repeat-y;
 
   &__content {
     display: flex;

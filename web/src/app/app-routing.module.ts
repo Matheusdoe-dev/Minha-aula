@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IndexViewComponent } from './views/index/index-view.component';
-import { UserLoginViewComponent } from './modules/users/user-login/user-login-view.component';
+import { IndexModule } from './modules/index/index.module';
+import { UsersModule } from './modules/users/users.module';
+
+import { IndexViewComponent } from './modules/index/index-view/index-view.component';
+import { UserLoginViewComponent } from './modules/users/user-login-view/user-login-view.component';
 
 const routes: Routes = [
   { path: 'user/login', component: UserLoginViewComponent },
@@ -11,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [IndexModule, UsersModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
