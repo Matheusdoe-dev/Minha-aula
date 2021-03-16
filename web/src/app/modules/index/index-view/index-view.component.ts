@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 export class IndexViewComponent implements OnInit {
   introImg: string = 'assets/images/intro-img.jpg';
 
-  constructor() {}
+  constructor() {
+    document.title = 'Pagina Inicial - Minha Aula';
+  }
 
   ngOnInit(): void {}
 }

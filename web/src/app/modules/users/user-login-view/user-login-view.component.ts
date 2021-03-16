@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-login-view.component.scss'],
 })
 export class UserLoginViewComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    document.title = 'Login - Minha Aula';
+  }
 
   ngOnInit(): void {}
 }
