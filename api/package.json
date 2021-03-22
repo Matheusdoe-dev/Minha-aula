@@ -1,0 +1,28 @@
+{
+  "name": "minha-aula-api",
+  "version": "1.0.0",
+  "main": "build/src/server/server.js",
+  "license": "MIT",
+  "scripts": {
+    "build-ts": "tsc --outDir build",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server/server.ts",
+    "start": "build-ts && node build/src/server/server.js && knex:migrate",
+    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
+    "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.21.2",
+    "sqlite3": "^5.0.0",
+    "ts-node": "^8.10.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.7",
+    "@types/knex": "^0.16.1",
+    "@types/sqlite3": "^3.1.6",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
+  }
+}
