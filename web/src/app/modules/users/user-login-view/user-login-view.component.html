@@ -1,8 +1,45 @@
 <main class="user-login" title="Login">
-  <app-header></app-header>
+  <app-header [secondaryLogo]="false"></app-header>
   <div class="container">
     <div class="row">
-      <div class="col-12 offset-sm-4 col-sm-4"></div>
+      <div class="col-12 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
+        <h3 class="user-login__title">Já tem uma conta?</h3>
+        <form
+          id="user-login"
+          #form="ngForm"
+          (ngSubmit)="onSubmit(form)"
+          class="user-login__form"
+          action=""
+        >
+          <app-input
+            name="email"
+            label="E-mail"
+            placeholder="Digite seu e-mail"
+            class="user-login__input"
+            (valueChanged)="onValueChange($event)"
+          ></app-input>
+          <app-input
+            name="senha"
+            label="Senha"
+            type="password"
+            placeholder="Digite sua senha"
+            (valueChanged)="onValueChange($event)"
+          ></app-input>
+          <app-button
+            content="Entrar"
+            [colors]="{ background: '#e8db3f', color: '#322c2c' }"
+            type="button"
+          ></app-button>
+          <span class="user-login__span">or</span>
+          <app-button
+            content="Cadastrar"
+            width="100%"
+            [colors]="{ background: 'white', color: '#322c2c' }"
+            type="link"
+            path="/user/create-account"
+          ></app-button>
+        </form>
+      </div>
     </div>
   </div>
 </main>
