@@ -1,0 +1,33 @@
+@import "../../../../assets/styles/settings/colors";
+
+.user-register {
+  min-height: 100vh;
+  height: auto;
+  background: $base-color;
+  padding-bottom: var(--gap-xl);
+  color: white;
+
+  &__form {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0 auto var(--gap-lg) auto;
+    color: white;
+    text-align: center;
+  }
+
+  &__span {
+    display: block;
+    text-align: center;
+    margin: var(--gap-sm) auto;
+  }
+
+  @media (max-width: 960px) {
+    background: $base-color;
+  }
+
+  &__input {
+    margin-bottom: var(--gap-sm);
+  }
+}
