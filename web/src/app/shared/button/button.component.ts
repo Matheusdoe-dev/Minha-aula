@@ -9,7 +9,12 @@ export class ButtonComponent implements OnInit {
   @Input() content: string = '';
   @Input() type: 'link' | 'button' = 'link';
   @Input() path?: string = '';
-  @Input() secondary?: boolean = false;
+  @Input() width?: string = '';
+  @Input() colors?: { background: string; color: string } = {
+    background: '$base-color-2',
+    color: 'white',
+  };
+  @Input() form?: string = '';
 
   constructor() {}
 

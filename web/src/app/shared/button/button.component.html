@@ -1,7 +1,20 @@
 <a
-  [class]="secondary ? 'button button--secondary' : 'button'"
+  class="button"
   *ngIf="type === 'link'"
+  [style.width]="width"
+  [style.color]="colors?.color"
+  [style.background]="colors?.background"
   [routerLink]="[path]"
   routerLinkActive="router-link-active"
   >{{ content }}</a
 >
+<button
+  type="submit"
+  class="button button--submit"
+  [style.width]="width"
+  [style.color]="colors?.color"
+  [style.background]="colors?.background"
+  *ngIf="type === 'button'"
+>
+  {{ content }}
+</button>
