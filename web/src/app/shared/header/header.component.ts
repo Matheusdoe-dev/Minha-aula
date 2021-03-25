@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  logoImg: string = 'assets/images/logo.svg';
+  @Input() secondaryLogo: boolean = false;
+  logoImg: string = '';
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.logoImg = this.secondaryLogo
+      ? `assets/images/logo.svg`
+      : `assets/images/logo-2.svg`;
+  }
 }
