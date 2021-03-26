@@ -1,0 +1,14 @@
+<div class="checkbox-block">
+  <label [for]="name" class="checkbox-block__label">
+    <input
+      type="checkbox"
+      [id]="name"
+      [name]="name"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (click)="onChange()"
+      class="checkbox-block__input"
+    />
+    {{ label }}
+  </label>
+</div>
