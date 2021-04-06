@@ -1,0 +1,10 @@
+<label [for]="name">{{ label }}</label>
+<mat-radio-group class="radio" [(ngModel)]="value">
+  <mat-radio-button
+    class="example-radio-button"
+    *ngFor="let option of options"
+    [value]="option.value"
+  >
+    {{ option.label }}
+  </mat-radio-button>
+</mat-radio-group>
