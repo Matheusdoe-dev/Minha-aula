@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 
-import { IndexViewComponent } from './index-view/index-view.component';
+import { IndexComponent } from './index.component';
 
 @NgModule({
-  declarations: [IndexViewComponent],
+  declarations: [IndexComponent],
   imports: [CommonModule, SharedModule],
 })
 export class IndexModule {}

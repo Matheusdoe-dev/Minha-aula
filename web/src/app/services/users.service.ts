@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { LoginData } from '../modules/users/user-login-view/user-login-view.interface';
+import { LoginData } from '../modules/users/user-login/user-login.interface';
 
 @Injectable({
   providedIn: 'root',

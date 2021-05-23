@@ -2,7 +2,7 @@
   <app-header [secondaryLogo]="false"></app-header>
   <div class="container">
     <div class="row">
-      <div class="col-12 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6">
+      <div class="col-12 offset-sm-2 col-sm-8 offset-lg-4 col-lg-4">
         <h3 class="user-register__title">Crie uma conta</h3>
         <form
           id="user-register"
@@ -41,7 +41,16 @@
             placeholder="Digite sua senha"
             class="user-register__input"
           ></app-input>
+          <app-radio-input
+            name="role"
+            label="Escolha uma opção"
+            [options]="[
+              { label: 'Aluno', value: 'aluno' },
+              { label: 'Professor', value: 'professor' }
+            ]"
+          ></app-radio-input>
           <app-button
+            path="/student/"
             content="Cadastrar"
             width="100%"
             [colors]="{ background: '#e8db3f', color: '#322c2c' }"

@@ -1,7 +1,24 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 @import "./assets/styles/settings/colors";
 @import "./assets/styles/settings/fonts";
+
 @import "./assets/styles/tools/breakpoints";
 @import "./assets/styles/tools/gaps";
+
 @import "./assets/styles/generic/reset";
+
 @import "./assets/styles/base/elements";
+
+@import "./assets/styles/objects/container";
+@import "./assets/styles/objects/mat-form-field";
+@import "./assets/styles/objects/button-group";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

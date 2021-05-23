@@ -3,13 +3,13 @@ import { NgForm } from '@angular/forms';
 
 import { UsersService } from 'src/app/services/users.service';
 
-import { LoginData } from './user-login-view.interface';
+import { LoginData } from './user-login.interface';
 
 @Component({
-  templateUrl: './user-login-view.component.html',
-  styleUrls: ['./user-login-view.component.scss'],
+  templateUrl: './user-login.component.html',
+  styleUrls: ['./user-login.component.scss'],
 })
-export class UserLoginViewComponent {
+export class UserLoginComponent {
   login: LoginData = { email: '', senha: '' };
 
   constructor(private _usersService: UsersService) {

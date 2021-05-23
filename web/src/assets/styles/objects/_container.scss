@@ -1,0 +1,7 @@
+@import "../tools/breakpoints";
+
+.container {
+  @media (min-width: $large) {
+    max-width: 1368px;
+  }
+}

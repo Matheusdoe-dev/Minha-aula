@@ -1,12 +1,4 @@
-<div class="input-block">
-  <label [for]="name" class="input-block__label">{{ label }}</label>
-  <input
-    [type]="type ? type : 'text'"
-    [id]="name"
-    [name]="name"
-    [placeholder]="placeholder"
-    [(ngModel)]="value"
-    (keydown)="onChange()"
-    class="input-block__input"
-  />
-</div>
+<mat-form-field appearance="outline">
+  <mat-label>{{ label }}</mat-label>
+  <input matInput [(ngModel)]="value" (ngModelChange)="onChange()" />
+</mat-form-field>

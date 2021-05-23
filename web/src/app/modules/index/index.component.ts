@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  templateUrl: './index-view.component.html',
-  styleUrls: ['./index-view.component.scss'],
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.scss'],
 })
-export class IndexViewComponent implements OnInit {
+export class IndexComponent implements OnInit {
   introImg: string = 'assets/images/intro-img.jpg';
 
   constructor() {

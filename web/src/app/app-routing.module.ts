@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { IndexModule } from './modules/index/index.module';
 import { UsersModule } from './modules/users/users.module';
+import { StudentModule } from './modules/student/student.module';
 
-import { IndexViewComponent } from './modules/index/index-view/index-view.component';
-import { UserLoginViewComponent } from './modules/users/user-login-view/user-login-view.component';
-
-const routes: Routes = [
-  { path: 'user/login', component: UserLoginViewComponent },
-  { path: '', component: IndexViewComponent, pathMatch: 'full' },
-  { path: '**', redirectTo: '' },
-];
+import { appRoutes } from './app.routes';
 
 @NgModule({
-  imports: [IndexModule, UsersModule, RouterModule.forRoot(routes)],
+  imports: [
+    IndexModule,
+    // UsersModule,
+    // StudentModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

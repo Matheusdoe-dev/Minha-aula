@@ -1,3 +1,7 @@
 @mixin fontPrimary {
-  font-family: "Lato", Roboto, Helvetica, Arial, sans-serif;
+  font-family: Lato, Roboto, Helvetica, Arial, sans-serif;
+}
+
+@mixin fontSecondary {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
 }
