@@ -1,86 +1,27 @@
-# Minha Aula
+# Web
 
-> Uma aplicação que liga alunos e professores.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+## Development server
 
-This is a web application that connect students and teachers
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-<a href="https://minha-aula.netlify.app"><img src="./github/thumbs/thumb.jpg"></a>
+## Code scaffolding
 
-## Get Started
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Start:
+## Build
 
-```sh
-npm install
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-npm start
-```
+## Running unit tests
 
-```sh
-yarn
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-yarn start
-```
+## Running end-to-end tests
 
-Build:
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-```sh
-npm run build
-```
+## Further help
 
-```sh
-yarn build
-```
-
-## About
-
-### What is that?
-
-<p> This is an web application made with ReactJS, Material UI and Styled-Components.</p>
-
-### Why ?
-
-<ul>
-<li> This was a project that I did on the Rockeseat Next Level Week 2.0</li>
-<li> Practice and gain more experience </li>
-</ul>
-
-### Technologies
-
-<ul>
-<li><a href="https://pt-br.reactjs.org/">ReactJS</a></li>
-<li><a href="https://material-ui.com/">Material UI</a></li>
-<li><a href="https://styled-components.com/">Styled-Components</a></li>
-</ul>
-
-## Links
-
-<ul>
-<li><a href="https://minha-aula.netlify.app/">Live</a></li>
-</ul>
-
-## Meta
-
-Author: Matheus do É Santos – [Linkedin](https://www.linkedin.com/in/matheusdoe-dev/)
-
-Distributed under the MIT license. See `LICENSE` for more information.
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
